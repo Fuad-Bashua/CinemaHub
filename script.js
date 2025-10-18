@@ -51,7 +51,7 @@ async function moviesSearch(value) {
       (movie) => `
 <div class="filmcard filmcard__invisible">
 <figure class="filmcard__poster--container">
-  <img src="${movie.Poster}" alt="" class="filmcard__poster">
+  <img src=${movie.Poster} alt="" class="filmcard__poster">
   <h3 class="filmcard__metadata--heading">${movie.Title}</h3>
   <div class="filmcard__metadata--collection">
     <div class="filmcard__metadata">
