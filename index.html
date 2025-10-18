@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema Hub</title>
+    <link rel="stylesheet" href="Styles.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/fc0b80239e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <body>
+      <section id="hero-landing-section">
+        <div class="cinema__hero-backdrop">
+          <figure class="cinema__hero-backdrop--container">
+            <div class="topbar__wrapper">
+              <div class="topbar__left-section">
+                <figure class="topbar__brand-logo--container">
+                  <img src="movielogo.png" alt="" class="topbar__brand-logo" />
+                </figure>
+                <a href="#home" class="topbar__navigation-link">Home</a>
+                <a href="" class="topbar__navigation-link">Contact</a>
+              </div>
+              <div class="topbar__right-section">
+                <div class="topbar__search-input--container">
+                  <input
+                    type="text"
+                    class="topbar__search-input"
+                    placeholder="Find a movie"
+                    onkeyup="searchBarEnter(event)"
+                  />
+                  <i
+                    class="fa-solid fa-magnifying-glass topbar__search-icon"
+                    onclick="searchActive()"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <i
+                  class="fa-solid fa-gear topbar__settings-icon"
+                  aria-hidden="true"
+                ></i>
+              </div>
+            </div>
+            <img
+              src="assets/background__cinema.jpg"
+              alt=""
+              class="cinema__hero-backdrop--image"
+            />
+            <div class="cinema__hero-backdrop--content">
+              <h1 class="cinema__hero-backdrop--heading">
+                Ticket<span class="accent-color">+</span>
+              </h1>
+              <h3 class="cinema__hero-backdrop--subheading">
+                With over <span class="accent-color">3000</span> movies on
+                Ticket<span class="accent-color">+</span>, the possibilites are
+                endless!
+              </h3>
+              <div class="cinema__hero-backdrop--search-bar">
+                <div class="cinema__search-input--container form__submit">
+                  <input
+                    type="text"
+                    class="cinema__search-input"
+                    placeholder="Find a movie"
+                    onkeyup="searchBarEnter(event)"
+                  />
+                  <i
+                    class="fa-solid fa-magnifying-glass cinema__search-icon"
+                    onclick="searchBarClick()"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section id="catalog-results-section">
+        <div class="container">
+          <div class="row">
+            <div class="catalog__main-content">
+              <div class="catalog__header-section">
+                <h2 class="catalog__header-section--label">Search results for:</h2>
+                <h2 class="catalog__query-display">""</h2>
+              </div>
+              <div class="catalog__items-grid">
+                <i
+                  class="fa-solid fa-spinner catalog__items-grid--spinner"
+                  aria-hidden="true"
+                ></i>
+                <div class="filmcard">
+                  <figure class="filmcard__poster--container">
+                    <img
+                      src="assets/postertest.jpg"
+                      alt=""
+                      class="filmcard__poster"
+                    />
+                    <h3 class="filmcard__metadata--heading">
+                      Guardians of The Galaxy Vol. 2
+                    </h3>
+                    <div class="filmcard__metadata--collection">
+                      <div class="filmcard__metadata filmcard__metadata-duration">
+                        <i
+                          class="fa-solid fa-clock filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">136m</p>
+                      </div>
+                      <div class="filmcard__metadata filmcard__metadata-rating">
+                        <i
+                          class="fa-solid fa-star filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">4.5</p>
+                      </div>
+                      <div class="filmcard__metadata filmcard__metadata-language">
+                        <i
+                          class="fa-solid fa-earth-americas filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">English</p>
+                      </div>
+                    </div>
+                  </figure>
+                  <h4 class="filmcard__primary-title">Guardians of the Galaxy Vol. 2</h4>
+                </div>
+                <div class="filmcard">
+                  <figure class="filmcard__poster--container">
+                    <img
+                      src="assets/postertest2.jpg "
+                      alt=""
+                      class="filmcard__poster"
+                    />
+                    <h3 class="filmcard__metadata--heading">The Avengers</h3>
+                    <div class="filmcard__metadata--collection">
+                      <div class="filmcard__metadata filmcard__metadata-duration">
+                        <i
+                          class="fa-solid fa-clock filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">136m</p>
+                      </div>
+                      <div class="filmcard__metadata filmcard__metadata-rating">
+                        <i
+                          class="fa-solid fa-star filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">4.5</p>
+                      </div>
+                      <div class="filmcard__metadata filmcard__metadata-language">
+                        <i
+                          class="fa-solid fa-earth-americas filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">English</p>
+                      </div>
+                    </div>
+                  </figure>
+                  <h4 class="filmcard__primary-title">The Avengers</h4>
+                </div>
+                <div class="filmcard">
+                  <figure class="filmcard__poster--container">
+                    <img
+                      src="assets/postertest3.jpg"
+                      alt=""
+                      class="filmcard__poster"
+                    />
+                    <h3 class="filmcard__metadata--heading">Spider-Man: Homecoming</h3>
+                    <div class="filmcard__metadata--collection">
+                      <div class="filmcard__metadata filmcard__metadata-duration">
+                        <i
+                          class="fa-solid fa-clock filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">136m</p>
+                      </div>
+                      <div class="filmcard__metadata filmcard__metadata-rating">
+                        <i
+                          class="fa-solid fa-star filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">4.5</p>
+                      </div>
+                      <div class="filmcard__metadata filmcard__metadata-language">
+                        <i
+                          class="fa-solid fa-earth-americas filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">English</p>
+                      </div>
+                    </div>
+                  </figure>
+                  <h4 class="filmcard__primary-title">Spider-man: Homecoming</h4>
+                </div>
+                <div class="filmcard">
+                  <figure class="filmcard__poster--container">
+                    <img
+                      src="assets/postertest4.jpg"
+                      alt=""
+                      class="filmcard__poster"
+                    />
+                    <h3 class="filmcard__metadata--heading">Minions: Rise of Gru</h3>
+                    <div class="filmcard__metadata--collection">
+                      <div class="filmcard__metadata filmcard__metadata-duration">
+                        <i
+                          class="fa-solid fa-clock filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">136m</p>
+                      </div>
+                      <div class="filmcard__metadata filmcard__metadata-rating">
+                        <i
+                          class="fa-solid fa-star filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">4.5</p>
+                      </div>
+                      <div class="filmcard__metadata filmcard__metadata-language">
+                        <i
+                          class="fa-solid fa-earth-americas filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">English</p>
+                      </div>
+                    </div>
+                  </figure>
+                  <h4 class="filmcard__primary-title">Minions: Rise of Gru</h4>
+                </div>
+                <div class="filmcard">
+                  <figure class="filmcard__poster--container">
+                    <img
+                      src="assets/postertest5.jpg"
+                      alt=""
+                      class="filmcard__poster"
+                    />
+                    <h3 class="filmcard__metadata--heading">
+                      Spider-Man: Into the Spider-Verse
+                    </h3>
+                    <div class="filmcard__metadata--collection">
+                      <div class="filmcard__metadata filmcard__metadata-duration">
+                        <i
+                          class="fa-solid fa-clock filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">136m</p>
+                      </div>
+                      <div class="filmcard__metadata filmcard__metadata-rating">
+                        <i
+                          class="fa-solid fa-star filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">4.5</p>
+                      </div>
+                      <div class="filmcard__metadata filmcard__metadata-language">
+                        <i
+                          class="fa-solid fa-earth-americas filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">English</p>
+                      </div>
+                    </div>
+                  </figure>
+                  <h4 class="filmcard__primary-title">
+                    Spider-Man: Into the Spider-Verse
+                  </h4>
+                </div>
+                <div class="filmcard">
+                  <figure class="filmcard__poster--container">
+                    <img
+                      src="assets/postertest6.jpg"
+                      alt=""
+                      class="filmcard__poster"
+                    />
+                    <h3 class="filmcard__metadata--heading">Nope</h3>
+                    <div class="filmcard__metadata--collection">
+                      <div class="filmcard__metadata filmcard__metadata-duration">
+                        <i
+                          class="fa-solid fa-clock filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">136m</p>
+                      </div>
+                      <div class="filmcard__metadata filmcard__metadata-rating">
+                        <i
+                          class="fa-solid fa-star filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">4.5</p>
+                      </div>
+                      <div class="filmcard__metadata filmcard__metadata-language">
+                        <i
+                          class="fa-solid fa-earth-americas filmcard__metadata--symbol"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="filmcard__metadata--value">English</p>
+                      </div>
+                    </div>
+                  </figure>
+                  <h4 class="filmcard__primary-title">Nope</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </body>
+  </body>
+</html>
